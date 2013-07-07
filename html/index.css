@@ -1,0 +1,11 @@
+body{
+    margin:0;
+    text-align: left;
+    background-color: #666666;
+}
+
+#testdiv{
+    width: 50%;
+    height: 50%;
+    background-color: #00a1ec;
+}
