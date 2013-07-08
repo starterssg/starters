@@ -49,9 +49,8 @@ app.post('/', function(request, response){
     var work = request.body.work;
     var full = request.body.full;
 
-    console.log(email);
     sendEmail(firstname,email);
-    response.send(email);
+    response.send(index);
 });
 
 var port = process.env.PORT || 5000;
