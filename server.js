@@ -1,6 +1,7 @@
 var express = require("express");
 var fs = require("fs");
 var clientEmail = require("./clientEmail.js");
+var profileEmail = require("./profileEmail.js");
 
 var app = express();
 app.use('/css', express.static(__dirname + '/css'));
@@ -27,6 +28,7 @@ app.post('/', function(request, response){
     var full = request.body.full;
 
     clientEmail.sendEmail(firstname,email);
+    profileEmail.sendEmail(email, name, gender, mobile, referral, school, work, full);
     response.redirect('/');
 });
 
