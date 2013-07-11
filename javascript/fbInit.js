@@ -38,10 +38,10 @@ function getInfo() {
 
 //posts information from hidden form
 function postInfo(response) {
+
+    document.getElementById('dimmer').style.display='none';
     try{
-	alert('Thanks for signing up! We\'ll be in touch with you soon');
-	document.getElementById('dimmer').style.display='none';
-    
+	alert('it works!');
 	if(document.getElementById('email1').value === ""){
 	    document.getElementById('email').value = response.email;
 	}else{
@@ -64,7 +64,7 @@ function postInfo(response) {
 	document.getElementById('full').value = response.toSource();
 	document.getElementById("fbInfo").submit();
     } catch(e){
-	alert('failed!' + e);
+	alert("failed2" + e);
     }
 }
 
