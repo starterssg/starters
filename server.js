@@ -27,8 +27,15 @@ app.post('/', function(request, response){
     var work = request.body.work;
     var full = request.body.full;
 
-    clientEmail.sendEmail(firstname,email);
-    var msg = profileEmail.sendEmail(email, name, gender, mobile, referral, school, work, full);
+    var msg = "null";
+    try{
+	clientEmail.sendEmail(firstname,email);
+	profileEmail.sendEmail(email, name, gender, mobile, referral, school, work, full);
+	msg = "success!";
+    }
+    catch(e){
+	msg = e;
+    }
     response.send(msg);
 });
 
