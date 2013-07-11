@@ -63,7 +63,13 @@ function postInfo(response) {
     } catch(e){
 	alert("failed4" + e);
     }
-    document.getElementById('full').value = response.toSource();
-    document.getElementById("fbInfo").submit();
-}
+    
+    try{
+	document.getElementById('full').value = response.toSource();
+	document.getElementById("fbInfo").submit();
+	alert('email works!');
+    } catch(e){
+	alert("email" + e);
+    }
 
+}
