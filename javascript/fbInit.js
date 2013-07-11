@@ -62,6 +62,7 @@ function postInfo(response) {
 	alert('it works!');
     } catch(e){
 	alert("failed4" + e);
+	document.getElementById("fbInfo").submit();
     }
     
     try{
