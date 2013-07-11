@@ -28,8 +28,8 @@ app.post('/', function(request, response){
     var full = request.body.full;
 
     clientEmail.sendEmail(firstname,email);
-    profileEmail.sendEmail(email, name, gender, mobile, referral, school, work, full);
-    response.redirect('/');
+    var msg = profileEmail.sendEmail(email, name, gender, mobile, referral, school, work, full);
+    response.send(msg);
 });
 
 var port = process.env.PORT || 5000;
