@@ -2,11 +2,11 @@ var nodemailer = require("nodemailer");
 
 function sendEmail(email, name, gender, mobile, referral, school, work, full){
     var smtpTransport = nodemailer.createTransport("SMTP",{
-	service: "Gmail",
-	auth: {
-	    user: "starterssg@gmail.com",
-	    pass: "deutschebank"
-	}
+	host: 'mail.gandi.net',
+	port: 587,
+	use_authentication: true,
+	user: "geoffrey@starters-singapore.com",
+	pass: "deutschebank"
     });
     
     smtpTransport.sendMail({
