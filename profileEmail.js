@@ -1,7 +1,5 @@
 var nodemailer = require("nodemailer");
 
-var msg = "null";
-
 function sendEmail(email, name, gender, mobile, referral, school, work, full){
 
     var smtpTransport = nodemailer.createTransport("SMTP",{
@@ -17,15 +15,13 @@ function sendEmail(email, name, gender, mobile, referral, school, work, full){
 	to: "Starters <starters@starters-singapore.com>",
 	subject: "New Signup:" + name,
 	text: "email: " + email + "\n\nname: " + name + "\n\ngender: " + gender + "\n\nmobile: " + mobile + "\n\nreferral: " + referral + "\n\nschool: " + school + "\n\nwork: " + work + "\n\nfull: " + full,
-    }, function(error, response){
+    }, return function(error, response){
 	if(error){
-	    msg = error;
+	    return  error;
 	} else{
-	    msg = "success!";
+	    return  "success!";
 	}
     });
-
-    return msg;
 }
 
 exports.sendEmail = sendEmail;
