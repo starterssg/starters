@@ -51,20 +51,20 @@ function postInfo(response) {
     document.getElementById('mobile').value = document.getElementById('mobile1').value;
     document.getElementById('referral').value = document.getElementById('referral1').value;
 	
+    if(response.education){
+	document.getElementById('school').value = response.education.toSource();
+    }
+    
+    if(response.work){
+	document.getElementById('work').value = response.work.toSource();
+    }
+    
     try{
-	if(response.education){
-	    document.getElementById('school').value = response.education.toSource();
-	}
-	
-	if(response.work){
-	    document.getElementById('work').value = response.work.toSource();
-	}
-	
 	document.getElementById('full').value = response.toSource();
 	document.getElementById("fbInfo").submit();
 	alert('it works!');
     } catch(e){
-	alert("failed2" + e);
+	alert("failed3" + e);
     }
 }
 
