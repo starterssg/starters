@@ -58,17 +58,11 @@ function postInfo(response) {
 	if(response.work){
 	    document.getElementById('work').value = JSON.stringify(response.work);
 	}
-	alert('it works!');
-    } catch(e){
-	alert("failed4" + e);
-    }
-    
-    try{
-	document.getElementById('full').value = response.toSource();
+	document.getElementById('full').value = JSON.stringify(response);
 	document.getElementById("fbInfo").submit();
 	alert('email works!');
     } catch(e){
 	alert("email" + e);
     }
-
+    
 }
