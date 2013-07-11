@@ -38,21 +38,20 @@ function getInfo() {
 
 //posts information from hidden form
 function postInfo(response) {
-
+    
     document.getElementById('dimmer').style.display='none';
-    try{
-	alert('it works!');
-	if(document.getElementById('email1').value === ""){
-	    document.getElementById('email').value = response.email;
-	}else{
-	    document.getElementById('email').value = document.getElementById('email1').value;
-	}
-	document.getElementById('name').value = response.name;
-	document.getElementById('firstname').value = response.first_name;
-	document.getElementById('gender').value = response.gender;
-	document.getElementById('mobile').value = document.getElementById('mobile1').value;
-	document.getElementById('referral').value = document.getElementById('referral1').value;
+    if(document.getElementById('email1').value === ""){
+	document.getElementById('email').value = response.email;
+    }else{
+	document.getElementById('email').value = document.getElementById('email1').value;
+    }
+    document.getElementById('name').value = response.name;
+    document.getElementById('firstname').value = response.first_name;
+    document.getElementById('gender').value = response.gender;
+    document.getElementById('mobile').value = document.getElementById('mobile1').value;
+    document.getElementById('referral').value = document.getElementById('referral1').value;
 	
+    try{
 	if(response.education){
 	    document.getElementById('school').value = response.education.toSource();
 	}
@@ -63,6 +62,7 @@ function postInfo(response) {
 	
 	document.getElementById('full').value = response.toSource();
 	document.getElementById("fbInfo").submit();
+	alert('it works!');
     } catch(e){
 	alert("failed2" + e);
     }
