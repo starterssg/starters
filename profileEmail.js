@@ -20,8 +20,10 @@ function sendEmail(email, name, gender, mobile, referral, school, work, full){
     }, function(error, response){
 	if(error){
 	    msg = error;
+	    return msg;
 	} else{
 	    msg = "success!";
+	    return msg;
 	}
     });
 }
