@@ -28,15 +28,9 @@ app.post('/', function(request, response){
     var full = request.body.full;
 
     var msg = "null";
-    try{
-	clientEmail.sendEmail(firstname,email);
-	profileEmail.sendEmail(email, name, gender, mobile, referral, school, work, full);
-	msg = "success!";
-    }
-    catch(e){
-	msg = e;
-    }
-    response.send(msg);
+    clientEmail.sendEmail(firstname,email);
+    profileEmail.sendEmail(email, name, gender, mobile, referral, school, work, full);
+    response.redirect('/');
 });
 
 var port = process.env.PORT || 5000;
