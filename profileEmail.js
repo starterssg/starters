@@ -2,6 +2,8 @@ var nodemailer = require("nodemailer");
 
 function sendEmail(email, name, gender, mobile, referral, school, work, full){
 
+    var msg = "null";
+
     var smtpTransport = nodemailer.createTransport("SMTP",{
 	host: 'mail.gandi.net',
 	port: 587,
@@ -15,13 +17,15 @@ function sendEmail(email, name, gender, mobile, referral, school, work, full){
 	to: "Starters <starters@starters-singapore.com>",
 	subject: "New Signup:" + name,
 	text: "email: " + email + "\n\nname: " + name + "\n\ngender: " + gender + "\n\nmobile: " + mobile + "\n\nreferral: " + referral + "\n\nschool: " + school + "\n\nwork: " + work + "\n\nfull: " + full,
-    }, return function(error, response){
+    }, function(error, response){
 	if(error){
-	    return  error;
+	    msg = error;
 	} else{
-	    return  "success!";
+	    msg = "success!";
 	}
     });
+
+    return msg;
 }
 
 exports.sendEmail = sendEmail;
