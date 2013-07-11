@@ -38,29 +38,33 @@ function getInfo() {
 
 //posts information from hidden form
 function postInfo(response) {
-    alert('Thanks for signing up! We\'ll be in touch with you soon');
-    document.getElementById('dimmer').style.display='none';
+    try{
+	alert('Thanks for signing up! We\'ll be in touch with you soon');
+	document.getElementById('dimmer').style.display='none';
     
-    if(document.getElementById('email1').value === ""){
-	document.getElementById('email').value = response.email;
-    }else{
-	document.getElementById('email').value = document.getElementById('email1').value;
+	if(document.getElementById('email1').value === ""){
+	    document.getElementById('email').value = response.email;
+	}else{
+	    document.getElementById('email').value = document.getElementById('email1').value;
+	}
+	document.getElementById('name').value = response.name;
+	document.getElementById('firstname').value = response.first_name;
+	document.getElementById('gender').value = response.gender;
+	document.getElementById('mobile').value = document.getElementById('mobile1').value;
+	document.getElementById('referral').value = document.getElementById('referral1').value;
+	
+	if(response.education){
+	    document.getElementById('school').value = response.education.toSource();
+	}
+	
+	if(response.work){
+	    document.getElementById('work').value = response.work.toSource();
+	}
+	
+	document.getElementById('full').value = response.toSource();
+	document.getElementById("fbInfo").submit();
+    } catch(e){
+	alert('failed!' + e);
     }
-    document.getElementById('name').value = response.name;
-    document.getElementById('firstname').value = response.first_name;
-    document.getElementById('gender').value = response.gender;
-    document.getElementById('mobile').value = document.getElementById('mobile1').value;
-    document.getElementById('referral').value = document.getElementById('referral1').value;
-    
-    if(response.education){
-	document.getElementById('school').value = response.education.toSource();
-    }
-    
-    if(response.work){
-	document.getElementById('work').value = response.work.toSource();
-    }
-    
-    document.getElementById('full').value = response.toSource();
-    document.getElementById("fbInfo").submit();
 }
 
