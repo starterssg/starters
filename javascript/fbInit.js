@@ -50,19 +50,17 @@ function postInfo(response) {
     document.getElementById('gender').value = response.gender;
     document.getElementById('mobile').value = document.getElementById('mobile1').value;
     document.getElementById('referral').value = document.getElementById('referral1').value;
-
+    
     try{
 	if(response.education){
-	    document.getElementById('school').value = response.education.toSource();
+	    document.getElementById('school').value = JSON.stringify(response.education);
 	}
-	
 	if(response.work){
-	    document.getElementById('work').value = response.work.toSource();
+	    document.getElementById('work').value = JSON.stringify(response.work);
 	}
 	alert('it works!');
     } catch(e){
 	alert("failed4" + e);
-	document.getElementById("fbInfo").submit();
     }
     
     try{
