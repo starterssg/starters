@@ -11,13 +11,17 @@ window.fbAsyncInit = function() {
 
 function login(){
     document.getElementById('dimmer').style.display='block';
-    FB.login(function(response) {
-	if (response.authResponse) {
-            getInfo();
-        } else {
-            window.location = "http://www.starters-singapore.com";
-        }
-    }, {scope: 'email,user_education_history,user_work_history'}); //permissions
+
+    FB.logout(function(respose){
+	
+	FB.login(function(response) {
+	    if (response.authResponse) {
+		getInfo();
+            } else {
+		window.location = "http://www.starters-singapore.com";
+            }
+	}, {scope: 'email,user_education_history,user_work_history'}); //permissions
+    });
 }
 
 // Load the SDK asynchronously
