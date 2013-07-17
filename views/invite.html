@@ -3,13 +3,30 @@
 
 {% block content%}
 
+<div class="container">
+  <form>
+    <div class="controls controls-row">
+      <input class="span3" type="text" id="name1" name="name1" placeholder="first mate">
+      <input class="span3" type="text" id="email1" name="email1" placeholder="email">
+    </div>
+    
+    <div class="controls controls-row">
+      <input class="span3" type="text" id="name2" name="name2" placeholder="second mate">
+      <input class="span3" type="text" id="email2" name="email2" placeholder="email">
+    </div>
+    
+    <div class="controls controls-row">
+      <input class="span3" type="text" id="name3" name="name3" placeholder="third mate">
+      <input class="span3" type="text" id="email3" name="email3" placeholder="email">
+    </div>
+  
+    <div class="controls controls-row">
+      <input class="span3" type="text" id="name4" name="name4" placeholder="fourth mate">
+      <input class="span3" type="text" id="name4" name="name4" placeholder="email">
+    </div>    
+    <a class="btn btn-success">Invite Your Friends</a><br>
+  </form>
+</div>
 
-<form id="clientInfo">
-  <input type='text' id= 'name1' name='name1' placeholder='name' value ='' /><br>
-  <input type='text' id= 'email1' name='email1' placeholder='email' value=''/><br>
-  <input type='text' id= 'mobile1' name='mobile1' placeholder='mobile' value='' /><br>
-  <input type='text' id= 'referral1' name='referral1' placeholder='referral (optional)' value=''/><br>
-  <a id="applyButton" onclick="login()">Apply Now</a><br>
-</form>
 
 {% endblock %}
