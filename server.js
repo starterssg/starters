@@ -1,21 +1,34 @@
+//Module dependencies
 var express = require("express");
-var fs = require("fs");
-var clientEmail = require("./clientEmail.js");
-var profileEmail = require("./profileEmail.js");
+var consolidate = require("consolidate");
+var http = require("http");
+var path = require('path');
+var swig = require('swig');
+var clientEmail = require("./node_modules/helper_modules/clientEmail");
+var profileEmail = require("./node_modules/helper_modules/profileEmail");
 
-var app = express();
-app.use('/css', express.static(__dirname + '/css'));
-app.use('/img', express.static(__dirname + '/img'));
-app.use('/javascript', express.static(__dirname + '/javascript'));
-app.use(express.bodyParser());
-
-var buf = fs.readFileSync("html/index.html");
-var index = buf.toString();
-
-app.get('/', function(request, response) {
-    response.send(index);
+//Initialize swig templating
+swig.init({
+    root: __dirname + '/views',
+    allowErrors: true // allows errors to be thrown and caught by express instead of suppressed by Swig
 });
 
+var app = express();
+app.set('port', 5000);
+app.set('views', __dirname + '/views');
+app.set('view engine', 'html');
+app.engine('.html', consolidate.swig);
+app.use('/public', express.static(__dirname + '/public'));
+app.use(express.methodOverride());
+app.use(express.bodyParser());
+app.use(app.router);
+
+//Routers
+app.get('/', function(req, res) {
+    res.render('index.html', {});
+});
+
+/*
 app.post('/', function(request, response){
     var email = request.body.email;
     var name = request.body.name;
@@ -32,8 +45,9 @@ app.post('/', function(request, response){
     profileEmail.sendEmail(email, name, gender, mobile, referral, school, work, full);
     response.redirect('/');
 });
+*/
 
-var port = process.env.PORT || 5000;
-app.listen(port, function() {
-    console.log("Listening on " + port);
+//localhost server
+http.createServer(app).listen(app.get('port'), function(){
+    console.log('Express server listening on port ' + app.get('port') + '. Environment is ' + process.env.NODE_ENV);
 });
