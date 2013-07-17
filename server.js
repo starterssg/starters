@@ -48,6 +48,8 @@ app.post('/', function(request, response){
 
 
 //localhost server
+/*
 http.createServer(app).listen(app.get('port'), function(){
     console.log('Express server listening on port ' + app.get('port') + '. Environment is ' + process.env.NODE_ENV);
 });
+*/
