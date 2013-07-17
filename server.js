@@ -28,7 +28,7 @@ app.get('/', function(req, res) {
     res.render('index.html', {});
 });
 
-/*
+
 app.post('/', function(request, response){
     var email = request.body.email;
     var name = request.body.name;
@@ -45,7 +45,7 @@ app.post('/', function(request, response){
     profileEmail.sendEmail(email, name, gender, mobile, referral, school, work, full);
     response.redirect('/');
 });
-*/
+
 
 //localhost server
 http.createServer(app).listen(app.get('port'), function(){
