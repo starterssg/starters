@@ -2,7 +2,6 @@
 var express = require("express");
 var consolidate = require("consolidate");
 var http = require("http");
-var path = require('path');
 var swig = require('swig');
 var clientEmail = require("./node_modules/helper_modules/clientEmail");
 var profileEmail = require("./node_modules/helper_modules/profileEmail");
@@ -14,7 +13,6 @@ swig.init({
 });
 
 var app = express();
-app.set('port', 5000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
 app.engine('.html', consolidate.swig);
@@ -48,8 +46,7 @@ app.post('/', function(request, response){
 
 
 //localhost server
-/*
-http.createServer(app).listen(app.get('port'), function(){
-    console.log('Express server listening on port ' + app.get('port') + '. Environment is ' + process.env.NODE_ENV);
+var port = process.env.PORT || 5000;
+app.listen(port, function() {
+    console.log("Listening on " + port);
 });
-*/
