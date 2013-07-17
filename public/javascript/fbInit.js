@@ -11,13 +11,13 @@ window.fbAsyncInit = function() {
 
 function login(){
     document.getElementById('dimmer').style.display='block';
-	FB.login(function(response) {
-	    if (response.authResponse) {
-		getInfo();
-            } else {
-		window.location = "http://www.starters-singapore.com";
-            }
-	}, {scope: 'email,user_education_history,user_work_history'}); //permissions
+    FB.login(function(response) {
+	if (response.authResponse) {
+	    getInfo();
+        } else {
+	    window.location = "http://www.starters-singapore.com";
+        }
+    }, {scope: 'email,user_education_history,user_work_history'}); //permissions
 }
 
 // Load the SDK asynchronously
@@ -38,8 +38,8 @@ function getInfo() {
 
 //posts information from hidden form
 function postInfo(response) {
-    
     document.getElementById('dimmer').style.display='none';
+    alert("Thanks for signing up! We'll be in touch with you soon.");
     if(document.getElementById('email1').value === ""){
 	document.getElementById('email').value = response.email;
     }else{
