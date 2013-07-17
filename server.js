@@ -27,22 +27,33 @@ app.get('/', function(req, res) {
 });
 
 
-app.post('/', function(request, response){
-    var email = request.body.email;
-    var name = request.body.name;
-    var firstname = request.body.firstname;
-    var gender = request.body.gender;
-    var mobile = request.body.mobile;
-    var referral = request.body.referral;
-    var school = request.body.school;
-    var work = request.body.work;
-    var full = request.body.full;
+app.post('/', function(req, res){
+    var email = req.body.email;
+    var name = req.body.name;
+    var firstname = req.body.firstname;
+    var gender = req.body.gender;
+    var mobile = req.body.mobile;
+    var referral = req.body.referral;
+    var school = req.body.school;
+    var work = req.body.work;
+    var full = req.body.full;
 
     var msg = "null";
     clientEmail.sendEmail(firstname,email);
     profileEmail.sendEmail(email, name, gender, mobile, referral, school, work, full);
-    response.redirect('/');
+    res.redirect('/');
 });
+
+
+app.get('/invite', function(req, res){
+    res.render('invite.html',{});
+});
+
+
+
+
+
+
 
 
 //localhost server
