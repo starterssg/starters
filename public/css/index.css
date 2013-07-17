@@ -32,7 +32,7 @@ body{
 	height: 600px;
 }
 
-h1{
+#leftChild1 h1{
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Lucida Grande",sans-serif;
 	font-size: 70px;
 	width: 650px;
@@ -41,7 +41,7 @@ h1{
 	color: #FFFFFF;
 }
 
-h2{
+#leftChild1 h2{
 	font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Lucida Grande",sans-serif;
 	font-size: 24px;
 	width: 650px;

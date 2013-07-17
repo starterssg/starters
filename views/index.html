@@ -1,7 +1,11 @@
 {% extends 'layout.html' %}
 
+{% block navbar %}
+<li class="active"><a href="/">Home</a></li>
+<li><a href="mailto:starters@starters-singapore.com">Contact</a></li>
+{% endblock %}
 
-{% block content%}
+{% block content %}
 <div id="fb-root"></div>
 <script src="../public/javascript/fbInit.js"></script>
 

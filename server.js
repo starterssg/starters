@@ -3,6 +3,7 @@ var express = require("express");
 var consolidate = require("consolidate");
 var http = require("http");
 var swig = require('swig');
+var crypto = require('crypto');
 var clientEmail = require("./node_modules/helper_modules/clientEmail");
 var profileEmail = require("./node_modules/helper_modules/profileEmail");
 
@@ -39,14 +40,14 @@ app.post('/', function(req, res){
     var full = req.body.full;
 
     var msg = "null";
-    clientEmail.sendEmail(firstname,email);
+    clientEmail.sendEmail(email,name,firstname);
     profileEmail.sendEmail(email, name, gender, mobile, referral, school, work, full);
     res.redirect('/');
 });
 
 
 app.get('/invite', function(req, res){
-    res.render('invite.html',{});
+    res.render('invite.html',{referrer: req.query.name});
 });
 
 

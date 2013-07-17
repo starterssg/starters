@@ -1,25 +1,47 @@
 {% extends 'layout.html' %}
 
 
+{% block navbar %}
+<li><a href="/">Home</a></li>
+<li><a href="mailto:starters@starters-singapore.com">Contact</a></li>
+{% endblock %}
+
+
 {% block content%}
 
-<div class="container">
+<style>
+  #containerConfig{
+  margin-top:100px;
+  }
+
+  h1{
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Lucida Grande",sans-serif;
+  font-size: 60px;
+  color: #FFFFFF;
+  }
+</style>
+
+
+
+<div id="containerConfig" class="container">
+  <h1> Invite your friends </h1>
   <form>
+    <div class="input-prepend">
+      <span class="add-on">Referrer</span>
+      <span class="span2 uneditable-input" id="referrer" type="referrer" value={{referrer}}>{{referrer}}</span>
+    </div>   
     <div class="controls controls-row">
       <input class="span3" type="text" id="name1" name="name1" placeholder="first mate">
       <input class="span3" type="text" id="email1" name="email1" placeholder="email">
     </div>
-    
     <div class="controls controls-row">
       <input class="span3" type="text" id="name2" name="name2" placeholder="second mate">
       <input class="span3" type="text" id="email2" name="email2" placeholder="email">
-    </div>
-    
+    </div>    
     <div class="controls controls-row">
       <input class="span3" type="text" id="name3" name="name3" placeholder="third mate">
       <input class="span3" type="text" id="email3" name="email3" placeholder="email">
     </div>
-  
     <div class="controls controls-row">
       <input class="span3" type="text" id="name4" name="name4" placeholder="fourth mate">
       <input class="span3" type="text" id="name4" name="name4" placeholder="email">
