@@ -32,24 +32,25 @@ body{
 	height: 600px;
 }
 
-#leftChild1 h1{
+h1{
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Lucida Grande",sans-serif;
-	font-size: 60px;
-	width: 550px;
+	font-size: 70px;
+	width: 650px;
 	text-align: center;
-	margin: 120px 0px 0px 50px;
+	margin: 30% 0px 0px 50px;
 	color: #FFFFFF;
 }
 
-#leftChild1 h2{
+h2{
 	font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Lucida Grande",sans-serif;
-	font-size: 20px;
-	width: 550px;
+	font-size: 24px;
+	width: 650px;
 	text-align: center;
-	margin: 10px 0px 0px 50px;
+	margin: 30px 0px 0px 50px;
 	letter-spacing:-1px;
 	text-align:center;
 	color: #FFFFFF;
+	line-height:110%;
 }
 
 #signup{
@@ -61,55 +62,47 @@ body{
 #signup input{
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Lucida Grande",sans-serif;
 	margin: 0px 0px 20px 0px;
-	font-size:26px;
-	width:250px;
+	font-size:20px;
+	width:243px;
 }
 
-#socialMedia
-{
-	position: fixed;
-  bottom: 1%;
-  right: 1%;
-}
-
-#dimmer
-{
-  background:#000;
-  opacity:0.5;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  display:none;
-  z-index:98;
+#dimmer{
+    background:#000;
+    opacity:0.5;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:none;
+    z-index:98;
 }
 
 #applyButton {
-	-moz-box-shadow:inset 0px 1px 0px 0px #c1ed9c;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #c1ed9c;
-	box-shadow:inset 0px 1px 0px 0px #c1ed9c;
-	background-color:#9dce2c;
-	-moz-border-radius:2px;
-	-webkit-border-radius:2px;
-	border-radius:2px;
-	border:1px solid #83c41a;
-	display:inline-block;
-	color:#ffffff;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Lucida Grande",sans-serif;
-	font-size:26px;
-	font-weight:bold;
-	padding:4px 60px;
-	text-shadow: 1px 1px #8cb82b;
-	text-decoration:none;
+    -moz-box-shadow:inset 0px 1px 0px 0px #c1ed9c;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #c1ed9c;
+    box-shadow:inset 0px 1px 0px 0px #c1ed9c;
+    background-color:#9dce2c;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border-radius:4px;
+    border:1px solid #83c41a;
+    display:inline-block;
+    color:#ffffff;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Lucida Grande",sans-serif;
+    font-size:26px;
+    font-weight:bold;
+    padding:7px 60px;
+    text-shadow: 1px 1px #8cb82b;
+    text-decoration:none;
 }
 
 #applyButton:hover {
-	background-color:#8cb82b;
-	cursor: pointer;
+    background-color:#8cb82b;
+    cursor: pointer;
 }
 
 #applyButton:active {
-	position:relative;
-	top:1px;
+    position:relative;
+    top:1px;
 }
