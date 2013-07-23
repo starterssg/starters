@@ -7,6 +7,7 @@ var crypto = require('crypto');
 var clientEmail = require("./node_modules/helper_modules/clientEmail");
 var profileEmail = require("./node_modules/helper_modules/profileEmail");
 var inviteEmail = require("./node_modules/helper_modules/inviteEmail");
+var logEmail = require("./node_modules/helper_modules/logEmail");
 
 //Initialize swig templating
 swig.init({
@@ -76,8 +77,14 @@ app.post('/invite', function(req,res){
     if(req.body.email4){
 	inviteEmail.sendEmail(req.body.email4, req.body.name4, host);
     }
-    
+
+    logEmail(host, req.body.email1, req.body.name1, req.body.email2, req.body.name2, req.body.email3, req.body.name3, req.body.email4, req.body.name4);
     res.redirect('/');
+});
+
+
+app.get('/invitation', function(req,res){
+    
 });
     
     
