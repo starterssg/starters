@@ -47,7 +47,15 @@ app.post('/', function(req, res){
 
 
 app.get('/invite', function(req, res){
-    res.render('invite.html',{referrer: req.query.name});
+
+    var hash = crypto.createHash('sha256').update(req.query.name).digest('hex');
+    if(hash === req.query.id){
+	res.render('invite.html',{referrer: req.query.name});
+    } else{
+	res.redirect('/');
+    }
+	
+
 });
 
 
