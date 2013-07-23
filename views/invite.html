@@ -25,7 +25,7 @@
 
 <div id="containerConfig" class="container">
   <h1> Invite your friends </h1>
-  <form>
+  <form method="post">
     <div class="input-prepend">
       <span class="add-on">Referrer</span>
       <span class="span2 uneditable-input" id="referrer" type="referrer" value={{referrer}}>{{referrer}}</span>
@@ -46,7 +46,7 @@
       <input class="span3" type="text" id="name4" name="name4" placeholder="fourth mate">
       <input class="span3" type="text" id="name4" name="name4" placeholder="email">
     </div>    
-    <a class="btn btn-success"><i class="icon-share icon-white"></i>Invite Your Friends</a><br>
+    <button class="btn btn-success" onclick="alert('Thanks for inviting your friends!')"><i class="icon-share icon-white"></i>Invite Your Friends</button><br>
   </form>
 </div>
 

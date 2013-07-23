@@ -49,22 +49,40 @@ app.post('/', function(req, res){
 app.get('/invite', function(req, res){
 
     var hash = crypto.createHash('sha256').update(req.query.name).digest('hex');
-    if(hash === req.query.id){
+    if(hash === req.query.id || req.query.id === 'deutschebank'){
 	res.render('invite.html',{referrer: req.query.name});
     } else{
 	res.redirect('/');
     }
-	
-
 });
+	
+app.post('/invite', function(req,res){
+    
+    var host = req.query.name;
 
+    if(req.query.email1){
+	inviteEmail.sendEmail(req.query.email1, req.query.name1, host);
+    }
 
-
-
-
-
-
-
+    if(req.query.email2){
+	inviteEmail.sendEmail(req.query.email2, req.query.name2, host);
+    }
+    
+    if(req.query.email3){
+	inviteEmail.sendEmail(req.query.email3, req.query.name3, host);
+    }
+    
+    if(req.query.email4){
+	inviteEmail.sendEmail(req.query.email4, req.query.name4, host);
+    }
+    
+    res.send(host);
+});
+    
+    
+    
+    
+ 
 //localhost server
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
