@@ -59,22 +59,24 @@ app.get('/invite', function(req, res){
 app.post('/invite', function(req,res){
     
     var host = req.query.name;
-
-    inviteEmail.sendEmail(req.query.email1, req.query.name1, host);
-
-    if(req.query.email2){
-	inviteEmail.sendEmail(req.query.email2, req.query.name2, host);
+    
+    if(req.body.email1){
+	inviteEmail.sendEmail(req.body.email1, req.body.name1, host);
     }
     
-    if(req.query.email3){
-	inviteEmail.sendEmail(req.query.email3, req.query.name3, host);
+    if(req.body.email2){
+	inviteEmail.sendEmail(req.body.email2, req.body.name2, host);
     }
     
-    if(req.query.email4){
-	inviteEmail.sendEmail(req.query.email4, req.query.name4, host);
+    if(req.body.email3){
+	inviteEmail.sendEmail(req.body.email3, req.body.name3, host);
     }
     
-    res.send(host);
+    if(req.body.email4){
+	inviteEmail.sendEmail(req.body.email4, req.body.name4, host);
+    }
+    
+    res.send(req.body.email1);
 });
     
     
