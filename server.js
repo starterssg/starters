@@ -6,6 +6,7 @@ var swig = require('swig');
 var crypto = require('crypto');
 var clientEmail = require("./node_modules/helper_modules/clientEmail");
 var profileEmail = require("./node_modules/helper_modules/profileEmail");
+var inviteEmail = require("./node_modules/helper_modules/inviteEmail");
 
 //Initialize swig templating
 swig.init({
