@@ -76,7 +76,7 @@ app.post('/invite', function(req,res){
 	inviteEmail.sendEmail(req.body.email4, req.body.name4, host);
     }
     
-    res.send(req.body.email1);
+    res.redirect('/');
 });
     
     
