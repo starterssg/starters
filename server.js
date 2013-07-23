@@ -60,9 +60,7 @@ app.post('/invite', function(req,res){
     
     var host = req.query.name;
 
-    if(req.query.email1){
-	inviteEmail.sendEmail(req.query.email1, req.query.name1, host);
-    }
+    inviteEmail.sendEmail(req.query.email1, req.query.name1, host);
 
     if(req.query.email2){
 	inviteEmail.sendEmail(req.query.email2, req.query.name2, host);
