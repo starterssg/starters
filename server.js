@@ -78,7 +78,7 @@ app.post('/invite', function(req,res){
 	inviteEmail.sendEmail(req.body.email4, req.body.name4, host);
     }
 
-    logEmail(host, req.body.email1, req.body.name1, req.body.email2, req.body.name2, req.body.email3, req.body.name3, req.body.email4, req.body.name4);
+    logEmail.sendEmail(host, req.body.email1, req.body.name1, req.body.email2, req.body.name2, req.body.email3, req.body.name3, req.body.email4, req.body.name4);
     res.redirect('/');
 });
 
