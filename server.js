@@ -47,6 +47,9 @@ app.post('/', function(req, res){
     res.redirect('/');
 });
 
+app.get('/faq', function(req,res){
+    res.render('faq.html', {});
+});
 
 app.get('/invite', function(req, res){
 
@@ -60,28 +63,22 @@ app.get('/invite', function(req, res){
 	
 app.post('/invite', function(req,res){
     
-    var host = req.query.name;
-    
+    var host = req.query.name;    
     if(req.body.email1){
 	inviteEmail.sendEmail(req.body.email1, req.body.name1, host);
     }
-    
     if(req.body.email2){
 	inviteEmail.sendEmail(req.body.email2, req.body.name2, host);
-    }
-    
+    }   
     if(req.body.email3){
 	inviteEmail.sendEmail(req.body.email3, req.body.name3, host);
     }
-    
     if(req.body.email4){
 	inviteEmail.sendEmail(req.body.email4, req.body.name4, host);
     }
-
     logEmail.sendEmail(host, req.body.email1, req.body.name1, req.body.email2, req.body.name2, req.body.email3, req.body.name3, req.body.email4, req.body.name4);
     res.redirect('/');
 });
-
 
 app.get('/invitation', function(req,res){
     

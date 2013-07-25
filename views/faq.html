@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block navbar %}
+<li><a href="/">Home</a></li>
+<li class="active"><a href="/faq">FAQ</a></li>
+<li><a href="mailto:starters@starters-singapore.com">Contact</a></li>
+{% endblock %}
+
+{% block content %}
+
+
+<style>
+  #faqBody{
+  background-color: #FFFFFF;
+  margin-top: 60px;
+  margin-left: 0px;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 60px;
+  }
+
+  #title{
+  color:#00a1ec;
+  font-size: 36px;
+  }
+
+  .question{
+  color:#00a1ec;
+  font-size: 20px;
+  }
+
+  .answer{
+  color:#f07746;
+  font-size: 20px;
+  }
+</style>
+
+<div class="container">
+  <div id="faqBody" class="span11">
+    <p id="title">
+      Frequently Asked Questions
+    </p>
+    <p class="question">
+      Q. This is a question
+    </p>
+
+    <p class="answer">
+      A. This is an answer
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}
