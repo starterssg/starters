@@ -1,3 +1,17 @@
+$(function(){
+    $(".popup").click(function(){
+	$(".signUpWrapper").show();
+	$(".dimmer").show();
+    });
+    
+    $(".dimmer").click(function(){
+	$(".dimmer").hide();
+	$(".signUpWrapper").hide();
+    });
+});
+
+
+
 window.fbAsyncInit = function() {
     FB.init({
 	appId      : '166384400201584', // App ID
@@ -10,7 +24,6 @@ window.fbAsyncInit = function() {
 
 
 function login(){
-    document.getElementById('dimmer').style.display='block';
     FB.login(function(response) {
 	if (response.authResponse) {
 	    getInfo();
@@ -38,7 +51,7 @@ function getInfo() {
 
 //posts information from hidden form
 function postInfo(response) {
-    document.getElementById('dimmer').style.display='none';
+    $("dimmer").hide();
     alert("Thanks for signing up! We'll be in touch with you soon.");
     if(document.getElementById('email1').value === ""){
 	document.getElementById('email').value = response.email;

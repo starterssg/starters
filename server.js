@@ -26,7 +26,7 @@ app.use(app.router);
 
 //Routers
 app.get('/', function(req, res) {
-    res.render('index.html', {});
+    res.render('layout2.html', {});
 });
 
 

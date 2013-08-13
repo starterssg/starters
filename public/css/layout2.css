@@ -1,0 +1,89 @@
+body{
+    margin:0px;
+    padding: 0px;
+}
+
+.signUpButton{
+    width:200px;
+    height:50px;
+    display:block;
+    margin: auto;
+    background-image: url('../img/facebookUnselected.jpeg');
+    background-repeat:no-repeat;
+}
+
+.signUpButton:hover{
+    width:200px;
+    height:50px;
+    display:block;
+    margin: auto;
+    background-image: url('../img/facebookSelected.jpeg');
+    background-repeat:no-repeat;
+    cursor: pointer;
+}
+
+.img{
+    width:250px;
+    height:300px;
+    margin:auto;
+    background-image: url('../img/circle.jpeg');
+    background-repeat:no-repeat;
+}
+
+
+.featurette-divider{
+    margin-top:50px;
+    margin-bottom:50px;
+    border-right: 0px none;
+    border-left: 0px none;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    border-width: 1px 0px;
+    border-style: solid none;
+    border-color: rgb(238, 238, 238) -moz-use-text-color rgb(255, 255, 255);
+}
+
+.signUpWrapper{
+    display:none;
+    z-index:999;
+    border-radius: 10px;
+    position:fixed;
+    top:50%;
+    left:50%;
+    margin-top: -175px;
+    margin-left: -140px;
+    height:350px;
+    width:280px;
+    background-color:#FFFFFF;
+    border: 1px solid  #EEEEEE;
+    text-align:center;
+}
+
+.signUpWrapper h2{
+    margin-top: 20px;
+}
+
+.signUpForm input{
+    margin: 10px 0px 10px 0px;
+}
+
+.signUpForm a{
+    margin: 10px 0px 10px 0px;
+}
+
+.dimmer{
+    display:none;
+    background:#000;
+    opacity:0.5;
+    filter: alpha(opacity=50);
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:none;
+    z-index:998;
+}
