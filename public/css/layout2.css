@@ -87,3 +87,35 @@ body{
     display:none;
     z-index:998;
 }
+
+#hero1{
+    height: 100%;
+    max-height: 700px;
+    min-height:630px;
+    background-color: transparent;
+    border-radius: 0px;
+    background-image: url('../img/img2.jpg');
+    background-repeat:no-repeat;
+}
+
+#hero2{
+    min-height: 350px;
+    max-height:1400px;
+    background-image: url('../img/img3.jpg');
+    background-repeat:no-repeat;
+}
+
+
+
+.hero-unit h1{
+    font-size: 100px;
+    color: #FFFFFF;
+    text-rendering:optimizeLegibility;
+}
+
+.hero-unit h2{
+    font-size: 36px;
+    text-rendering:optimizeLegibility;
+    line-height: 38px;
+    color: #FFFFFF;
+}
