@@ -47,7 +47,9 @@ function login(){
 
 function getInfo() {
     document.getElementById('email').value = document.getElementById('email1').value;
+    alert('alert1');
     FB.api('/me', function(response) {
+	alert('alert2')
 	postInfo(response);
     });
 }
