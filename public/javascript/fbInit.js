@@ -22,8 +22,10 @@ window.fbAsyncInit = function() {
 
 
 function login(){
+    alert('testalert1');
     FB.login(function(response) {
 	if (response.authResponse) {
+	    alert('testalert2');
 	    getInfo();
         } else {
 	    window.location = "http://www.starters-singapore.com";
