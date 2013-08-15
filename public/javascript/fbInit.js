@@ -43,7 +43,6 @@ function login(){
 function getInfo() {
     document.getElementById('email').value = document.getElementById('email1').value;
     FB.api('/me', function(response) {
-	alert('alerttest');
 	postInfo(response);
     });
 }
