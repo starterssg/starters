@@ -22,10 +22,8 @@ window.fbAsyncInit = function() {
 
 
 function login(){
-    alert('testalert1');
     FB.login(function(response) {
 	if (response.authResponse) {
-	    alert('testalert2');
 	    getInfo();
         } else {
 	    window.location = "http://www.starters-singapore.com";
@@ -43,10 +41,9 @@ function login(){
 }(document));
 
 function getInfo() {
-    document.getElementById('email').value = document.getElementById('email1').value;
     alert('alert1');
+    document.getElementById('email').value = document.getElementById('email1').value;
     FB.api('/me', function(response) {
-	alert('alert2')
 	postInfo(response);
     });
 }
