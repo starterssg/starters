@@ -100,22 +100,34 @@ body{
 
 #hero2{
     min-height: 350px;
-    max-height:1400px;
-    background-image: url('../img/img3.jpg');
+    max-height:500px;
+    background-image: url('../img/img1.jpg');
     background-repeat:no-repeat;
 }
 
-
-
-.hero-unit h1{
+#hero1 h1{
     font-size: 100px;
     color: #FFFFFF;
     text-rendering:optimizeLegibility;
 }
 
-.hero-unit h2{
+#hero1 h2{
     font-size: 36px;
     text-rendering:optimizeLegibility;
     line-height: 38px;
     color: #FFFFFF;
+    width:750px;
+}
+
+#hero2 h2{
+    font-size: 36px;
+    text-rendering:optimizeLegibility;
+    color: #FFFFFF;
+    margin-top:100px;
+}
+
+.span4 p{
+    font-family: "Bad Script", cursive;
+    font-size: 24px;
+    line-height: 36px;
 }
