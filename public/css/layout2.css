@@ -1,0 +1,133 @@
+body{
+    margin:0px;
+    padding: 0px;
+}
+
+.signUpButton{
+    width:200px;
+    height:50px;
+    display:block;
+    margin: auto;
+    background-image: url('../img/facebookUnselected.jpeg');
+    background-repeat:no-repeat;
+}
+
+.signUpButton:hover{
+    width:200px;
+    height:50px;
+    display:block;
+    margin: auto;
+    background-image: url('../img/facebookSelected.jpeg');
+    background-repeat:no-repeat;
+    cursor: pointer;
+}
+
+.img{
+    width:250px;
+    height:300px;
+    margin:auto;
+    background-image: url('../img/circle.jpeg');
+    background-repeat:no-repeat;
+}
+
+
+.featurette-divider{
+    margin-top:50px;
+    margin-bottom:50px;
+    border-right: 0px none;
+    border-left: 0px none;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    border-width: 1px 0px;
+    border-style: solid none;
+    border-color: rgb(238, 238, 238) -moz-use-text-color rgb(255, 255, 255);
+}
+
+.signUpWrapper{
+    display:none;
+    z-index:999;
+    border-radius: 10px;
+    position:fixed;
+    top:50%;
+    left:50%;
+    margin-top: -175px;
+    margin-left: -140px;
+    height:350px;
+    width:280px;
+    background-color:#FFFFFF;
+    border: 1px solid  #EEEEEE;
+    text-align:center;
+}
+
+.signUpWrapper h2{
+    margin-top: 20px;
+}
+
+.signUpForm input{
+    margin: 10px 0px 10px 0px;
+}
+
+.signUpForm a{
+    margin: 10px 0px 10px 0px;
+}
+
+.dimmer{
+    display:none;
+    background:#000;
+    opacity:0.5;
+    filter: alpha(opacity=50);
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:none;
+    z-index:998;
+}
+
+#hero1{
+    height: 100%;
+    max-height: 700px;
+    min-height:630px;
+    background-color: transparent;
+    border-radius: 0px;
+    background-image: url('../img/img2.jpg');
+    background-repeat:no-repeat;
+}
+
+#hero2{
+    min-height: 350px;
+    max-height:500px;
+    background-image: url('../img/img1.jpg');
+    background-repeat:no-repeat;
+}
+
+#hero1 h1{
+    font-size: 100px;
+    color: #FFFFFF;
+    text-rendering:optimizeLegibility;
+}
+
+#hero1 h2{
+    font-size: 36px;
+    text-rendering:optimizeLegibility;
+    line-height: 38px;
+    color: #FFFFFF;
+    width:750px;
+}
+
+#hero2 h2{
+    font-size: 36px;
+    text-rendering:optimizeLegibility;
+    color: #FFFFFF;
+    margin-top:100px;
+}
+
+.span4 p{
+    font-family: "Bad Script", cursive;
+    font-size: 24px;
+    line-height: 36px;
+}
