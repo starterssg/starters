@@ -10,11 +10,6 @@ $(function(){
     });
 });
 
-try{
-    document.execCommand('BackgroundImageCache', false, true);
-}catch(e){
-}
-
 window.fbAsyncInit = function() {
     FB.init({
 	appId      : '166384400201584', // App ID
