@@ -1,7 +1,20 @@
+@font-face {
+    font-family: 'Adelle';
+    src: url('../font/adellebasic_bold-webfont.eot');
+    src: url('../font/adellebasic_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/adellebasic_bold-webfont.woff') format('woff'),
+         url('../font/adellebasic_bold-webfont.ttf') format('truetype'),
+         url('../font/adellebasic_bold-webfont.svg#adelle_basic_rgbold') format('svg');
+    font-weight: narrow;
+    font-style: normal;
+}
+
+
 body{
     margin:0px;
     padding: 0px;
 }
+
 
 .signUpButton{
     width:200px;
@@ -127,6 +140,47 @@ body{
 }
 
 .span4 p{
+    font-family: "Bad Script", cursive;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.featurette{
+    padding-top:120px;
+    overflow: hidden;
+}
+
+.featurette-heading{
+    font-size: 50px;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.pull-right{
+    float:right;
+}
+
+.pull-left{
+    float:left;
+}
+
+.featurette-image{
+    margin-top: -120px;
+}
+
+.featurette-image.pull-right{
+    margin-left: 40px;
+}
+
+.featurette-image.pull-left{
+    margin-right: 40px;
+}
+
+.muted{
+    color: rgb(153, 153, 153);
+}
+
+.steps{
     font-family: "Bad Script", cursive;
     font-size: 24px;
     line-height: 36px;
