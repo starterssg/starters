@@ -109,13 +109,17 @@ body{
     border-radius: 0px;
     background-image: url('../img/background.jpg');
     background-repeat:no-repeat;
+    background-position: center center;
 }
 
 #hero2{
     min-height: 350px;
     max-height:500px;
+    background-color: transparent;
+    border-radius: 0px;
     background-image: url('../img/starters.jpg');
     background-repeat:no-repeat;
+    background-position: center center;
 }
 
 #hero1 h1{
