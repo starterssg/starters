@@ -26,7 +26,7 @@ app.use(app.router);
 
 //Routers
 app.get('/', function(req, res) {
-    res.render('layout2.html', {});
+    res.render('index.html', {});
 });
 
 
@@ -45,10 +45,6 @@ app.post('/', function(req, res){
     clientEmail.sendEmail(email,name,firstname);
     profileEmail.sendEmail(email, name, gender, mobile, referral, school, work, full);
     res.redirect('/');
-});
-
-app.get('/faq', function(req,res){
-    res.render('faq.html', {});
 });
 
 app.get('/invite', function(req, res){

@@ -107,14 +107,14 @@ body{
     min-height:630px;
     background-color: transparent;
     border-radius: 0px;
-    background-image: url('../img/img2.jpg');
+    background-image: url('../img/background.jpg');
     background-repeat:no-repeat;
 }
 
 #hero2{
     min-height: 350px;
     max-height:500px;
-    background-image: url('../img/img1.jpg');
+    background-image: url('../img/starters.jpg');
     background-repeat:no-repeat;
 }
 
