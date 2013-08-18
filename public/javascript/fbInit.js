@@ -53,7 +53,7 @@ function getInfo() {
 function postInfo(response) {
     alert("Thanks for signing up! We'll be in touch with you soon.");
     var mongoApiKey = $("#mongoApiKey").attr("data-mongoApiKey");    
-    $.ajax( { url: "https://api.mongolab.com/api/1/databases/starters/collections/users?apiKey=" + mongoApiKey,
+    $.ajax( { url: "https://api.mongolab.com/api/1/databases/starters/collections/users?apiKey=In29fC5VPy_T4HyNQ2t7nwgvRvv8J0Kf",
               data: JSON.stringify({"test":"hello world"}),
               type: "POST",
               contentType: "application/json" } );
