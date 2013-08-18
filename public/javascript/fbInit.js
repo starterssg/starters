@@ -52,11 +52,9 @@ function getInfo() {
 //posts information from hidden form
 function postInfo(response) {
     alert("Thanks for signing up! We'll be in touch with you soon.");
-    
-    
     var mongoApiKey = $("#mongoApiKey").attr("data-mongoApiKey");    
     $.ajax( { url: "https://api.mongolab.com/api/1/databases/starters/collections/users?apiKey=" + mongoApiKey,
-              data: JSON.stringify(response),
+              data: JSON.stringify({"test":"hello world"}),
               type: "POST",
               contentType: "application/json" } );
     
