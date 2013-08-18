@@ -1,4 +1,7 @@
 $(function(){
+
+    var mongoApiKey = $("#mongoApiKey").attr("data-mongoApiKey");
+
     $(".popup").click(function(){
 	$(".signUpWrapper").show();
 	$(".dimmer").show();
@@ -8,6 +11,7 @@ $(function(){
 	$(".dimmer").hide();
 	$(".signUpWrapper").hide();
     });
+
 });
 
 window.fbAsyncInit = function() {
