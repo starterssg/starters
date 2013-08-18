@@ -1,7 +1,6 @@
 $(function(){
 
     var mongoApiKey = $("#mongoApiKey").attr("data-mongoApiKey");
-    alert(mongoApiKey);
     
     $(".popup").click(function(){
 	$(".signUpWrapper").show();
