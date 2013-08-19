@@ -1,14 +1,13 @@
 $(function(){
 
+    /*
     var mongoApiKey = $("#mongoApiKey").attr("data-mongoApiKey");    
-    
-    alert(mongoApiKey);
 
     $.ajax( { url: "https://api.mongolab.com/api/1/databases/starters/collections/users?apiKey=In29fC5VPy_T4HyNQ2t7nwgvRvv8J0Kf",
               data: JSON.stringify({"test":"hello"}),
               type: "POST",
               contentType: "application/json" } );
-
+    */
 
     
     $(".popup").click(function(){
