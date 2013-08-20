@@ -52,8 +52,7 @@ function getInfo() {
 //posts information from hidden form
 function postInfo(response) {
     
-    alert("Thanks for signing up. We'll be in touch with you soon!");
-    
+    alert("Thanks for signing up. We'll be in touch with you soon!");    
     if(document.getElementById('email1').value === ""){
 	document.getElementById('email').value = response.email;
     }else{
