@@ -6,7 +6,8 @@
 	"express": "3.3.4",
 	"swig":"*",
 	"consolidate":"*",
-	"nodemailer":"*"
+	"nodemailer":"*",
+	"restler":"*"
     },
     
     "engines": {

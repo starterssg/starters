@@ -4,6 +4,7 @@ var consolidate = require("consolidate");
 var http = require("http");
 var swig = require('swig');
 var crypto = require('crypto');
+var restler = require('restler');
 var clientEmail = require("./node_modules/helper_modules/clientEmail");
 var profileEmail = require("./node_modules/helper_modules/profileEmail");
 var inviteEmail = require("./node_modules/helper_modules/inviteEmail");
@@ -45,6 +46,20 @@ app.post('/', function(req, res){
     var msg = "null";
     clientEmail.sendEmail(email,name,firstname);
     profileEmail.sendEmail(email, name, gender, mobile, referral, school, work, full);
+
+
+    var url = 'https://api.mongolab.com/api/1/databases/starters/collections/users?apiKey=In29fC5VPy_T4HyNQ2t7nwgvRvv8J0Kf';
+    
+    restler.postJson(url, full).
+	on('complete', function(data,response){
+	    console.log(full);
+	});
+    
+    
+    
+
+
+
     res.redirect('/');
 });
 
@@ -74,9 +89,15 @@ app.post('/invite', function(req,res){
 	inviteEmail.sendEmail(req.body.email4, req.body.name4, host);
     }
     logEmail.sendEmail(host, req.body.email1, req.body.name1, req.body.email2, req.body.name2, req.body.email3, req.body.name3, req.body.email4, req.body.name4);
+
     res.redirect('/');
 });
-    
+
+app.get('/test', function(req,res){
+    res.send('suces');
+});
+
+
     
     
  
