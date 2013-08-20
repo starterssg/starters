@@ -28,9 +28,8 @@ app.use(app.router);
 
 //Routers
 app.get('/', function(req, res) {
-    res.render('index.html', {mongoApiKey: config.mongoApiKey});
+    res.render('index.html', {});
 });
-
 
 app.post('/', function(req, res){
     var email = req.body.email;
@@ -46,25 +45,13 @@ app.post('/', function(req, res){
     var msg = "null";
     clientEmail.sendEmail(email,name,firstname);
     profileEmail.sendEmail(email, name, gender, mobile, referral, school, work, full);
-
-
-    var url = 'https://api.mongolab.com/api/1/databases/starters/collections/users?apiKey=In29fC5VPy_T4HyNQ2t7nwgvRvv8J0Kf';
     
-    restler.postJson(url, JSON.parse(full)).
+    restler.postJson(config.mongoApiKey, JSON.parse(full)).
 	on('complete', function(data,response){
 	    console.log(full);
 	});
     
-    
-    
-
-    
-    try{
-	var str = JSON.parse(full);
-	res.send(str);
-    }catch(e){
-	res.send('invalid!');
-    }
+    redirect('/');
 });
 
 app.get('/invite', function(req, res){

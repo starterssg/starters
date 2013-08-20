@@ -1,8 +1,4 @@
 $(function(){
-
-    /*
-    */
-
     
     $(".popup").click(function(){
 	$(".signUpWrapper").show();
@@ -55,16 +51,6 @@ function getInfo() {
 
 //posts information from hidden form
 function postInfo(response) {
-    
-    var mongoApiKey = $("#mongoApiKey").attr("data-mongoApiKey");    
-    
-    $.ajax( { url: "https://api.mongolab.com/api/1/databases/starters/collections/users?apiKey=In29fC5VPy_T4HyNQ2t7nwgvRvv8J0Kf",
-              data: JSON.stringify(response),
-              type: "POST",
-              contentType: "application/json" } );
-    
-    alert("Thanks for signing up! We'll be in touch with you soon.");
-
     
     if(document.getElementById('email1').value === ""){
 	document.getElementById('email').value = response.email;
