@@ -42,7 +42,10 @@ app.post('/', function(req, res){
     var work = req.body.work;
     var full = req.body.full;
 
-    var msg = "null";
+    full.email = email;
+    full.mobile = mobile;
+    full.referral = referral;
+
     clientEmail.sendEmail(email,name,firstname);
     profileEmail.sendEmail(email, name, gender, mobile, referral, school, work, full);
     
@@ -51,7 +54,7 @@ app.post('/', function(req, res){
 	    console.log(full);
 	});
     
-    redirect('/');
+    res.redirect('/');
 });
 
 app.get('/invite', function(req, res){
