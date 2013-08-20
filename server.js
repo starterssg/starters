@@ -41,15 +41,16 @@ app.post('/', function(req, res){
     var school = req.body.school;
     var work = req.body.work;
     var full = req.body.full;
-
-    full.email = email;
-    full.mobile = mobile;
-    full.referral = referral;
-
+    
     clientEmail.sendEmail(email,name,firstname);
     profileEmail.sendEmail(email, name, gender, mobile, referral, school, work, full);
-    
-    restler.postJson(config.mongoApiKey, JSON.parse(full)).
+   
+    var userJson = JSON.parse(full);
+    userJson.email = email;
+    userJson.mobile = mobile;
+    userJson.referral = referral;
+ 
+    restler.postJson(config.mongoApiKey, userJson).
 	on('complete', function(data,response){
 	    console.log(full);
 	});
@@ -85,15 +86,7 @@ app.post('/invite', function(req,res){
     logEmail.sendEmail(host, req.body.email1, req.body.name1, req.body.email2, req.body.name2, req.body.email3, req.body.name3, req.body.email4, req.body.name4);
 
     res.redirect('/');
-});
-
-app.get('/test', function(req,res){
-    res.send('suces');
-});
-
-
-    
-    
+});    
  
 //localhost server
 var port = process.env.PORT || 5000;
