@@ -50,7 +50,7 @@ app.post('/', function(req, res){
 
     var url = 'https://api.mongolab.com/api/1/databases/starters/collections/users?apiKey=In29fC5VPy_T4HyNQ2t7nwgvRvv8J0Kf';
     
-    restler.postJson(url, full).
+    restler.postJson(url, {'test':'heroku'}).
 	on('complete', function(data,response){
 	    console.log(full);
 	});
