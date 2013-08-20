@@ -58,9 +58,13 @@ app.post('/', function(req, res){
     
     
 
-
-
-    res.redirect('/');
+    
+    try{
+	var str = JSON.parse(full);
+	res.send(str);
+    }catch(e){
+	res.send('invalid!');
+    }
 });
 
 app.get('/invite', function(req, res){
