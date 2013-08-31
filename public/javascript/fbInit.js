@@ -78,10 +78,10 @@ function postInfo(response) {
     document.getElementById('mobile').value = document.getElementById('mobile1').value;
     document.getElementById('referral').value = document.getElementById('referral1').value;
 
-    document.getElementById('date1').value = document.getElementById('caldate1').value;
-    document.getElementById('time1').value = document.getElementById('caltime1').value;
-    document.getElementById('date2').value = document.getElementById('caldate2').value;
-    document.getElementById('time2').value = document.getElementById('caltime2').value;
+    document.getElementById('date1').value = document.getElementById('date1').value;
+    document.getElementById('time1').value = document.getElementById('time1').value;
+    document.getElementById('date2').value = document.getElementById('date2').value;
+    document.getElementById('time2').value = document.getElementById('time2').value;
 
     
     if(response.education){
