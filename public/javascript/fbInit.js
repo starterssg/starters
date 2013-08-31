@@ -1,14 +1,29 @@
 $(function(){
     
     $(".popup").click(function(){
-	$(".signUpWrapper").show();
+	$(".datetimeWrapper").show();
 	$(".dimmer").show();
     });
     
     $(".dimmer").click(function(){
 	$(".dimmer").hide();
 	$(".signUpWrapper").hide();
+	$(".datetimeWrapper").hide();
     });
+
+    $("#signup").click(function(){
+	$(".signUpWrapper").show();
+	$(".datetimeWrapper").hide();
+    });
+
+    $(".date").datepicker();
+    $(".time").timepicker({
+	timeFormat: 'h:mm tt',
+	hourMin: 15,
+	hourMax: 23,
+	stepMinute: 5
+    });
+
 
 });
 
@@ -51,7 +66,6 @@ function getInfo() {
 
 //posts information from hidden form
 function postInfo(response) {
-    
     alert("Thanks for signing up. We'll be in touch with you soon!");    
     if(document.getElementById('email1').value === ""){
 	document.getElementById('email').value = response.email;
@@ -63,6 +77,12 @@ function postInfo(response) {
     document.getElementById('gender').value = response.gender;
     document.getElementById('mobile').value = document.getElementById('mobile1').value;
     document.getElementById('referral').value = document.getElementById('referral1').value;
+
+    document.getElementById('date1').value = document.getElementById('date1').value;
+    document.getElementById('time1').value = document.getElementById('time1').value;
+    document.getElementById('date2').value = document.getElementById('date2').value;
+    document.getElementById('time2').value = document.getElementById('time2').value;
+
     
     if(response.education){
 	document.getElementById('school').value = JSON.stringify(response.education);

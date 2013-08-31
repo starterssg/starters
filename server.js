@@ -32,6 +32,11 @@ app.get('/', function(req, res) {
 });
 
 app.post('/', function(req, res){
+    var date1 = req.body.date1;
+    var time1 = req.body.time1;
+    var date2 = req.body.date2;
+    var time2 = req.body.time2;
+
     var email = req.body.email;
     var name = req.body.name;
     var firstname = req.body.firstname;
@@ -43,7 +48,7 @@ app.post('/', function(req, res){
     var full = req.body.full;
     
     clientEmail.sendEmail(email,name,firstname);
-    profileEmail.sendEmail(email, name, gender, mobile, referral, school, work, full);
+    profileEmail.sendEmail(date1, time1, date2, time2, email, name, gender, mobile, referral, school, work, full);
    
     var userJson = JSON.parse(full);
     userJson.email = email;
