@@ -1,7 +1,7 @@
 $(function(){
     
     $(".popup").click(function(){
-	$(".datetimeWrapper").show();
+	$(".signUpWrapper").show();
 	$(".dimmer").show();
     });
     
@@ -10,10 +10,10 @@ $(function(){
 	$(".signUpWrapper").hide();
 	$(".datetimeWrapper").hide();
     });
-
+    
     $("#signup").click(function(){
-	$(".signUpWrapper").show();
-	$(".datetimeWrapper").hide();
+	$(".datetimeWrapper").show();
+	$(".signUpWrapper").hide();
     });
 
     $(".date").datepicker();
